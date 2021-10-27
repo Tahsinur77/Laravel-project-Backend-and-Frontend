@@ -34,7 +34,7 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
-						Login
+						Registration
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
@@ -48,6 +48,28 @@
 						<input class="input100" type="password" name="pass" placeholder="Type your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Confirm Password</span>
+						<input class="input100" type="password" name="confirmPass" placeholder="Retype your password">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Phone number is required">
+						<span class="label-input100">Phone number</span>
+						<input class="input100" type="text" name="pNumber" placeholder="Type your phone number">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate="Email is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="email" placeholder="Type your email">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
+						<span class="label-input100">Date of birth</span>
+						<input class="input100" type="date" name="dob" placeholder="Type your date of birth">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
 					
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
@@ -59,15 +81,17 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Login
+								Register
 							</button>
 						</div>
 					</div>
 
 					<div class="txt1 text-center p-t-54 p-b-20">
+					
 						<a href="#" class="txt2">
-							Sign Up
+							Sign in
 						</a>
+						
 					</div>
 				</form>
 			</div>
