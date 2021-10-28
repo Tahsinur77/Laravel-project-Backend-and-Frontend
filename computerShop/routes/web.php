@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +16,31 @@ use App\Http\Controllers\CustomerController;
 |
 */
 
+
+//Deafult
 Route::get('/', function () {
-    return view('pages.reg');
+    return view('pages.customers.reg');
 });
+
+
+//Login
 Route::get('/login',[LoginController::class,'login'])->name('login');
 
-Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
-Route::post('/products/details',[ProductController::class,'products'])->name('products');
+
 //Registration
 Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('/registration',[CustomerController::class,'registrationSubmit'])->name('customer.registration');
 Route::get('/customer/list',[CustomerController::class,'customerList'])->name('customer.list');
+
+//Customer Registration
+Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
+Route::post('/registration',[CustomerController::class,'registrationSubmit'])->name('customer.registration');
+Route::get('/customer/list',[CustomerController::class,'customerList'])->name('customer.list');
+
+//Products
+Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
+Route::post('/products/details',[ProductController::class,'products'])->name('products');
+
+//Empolyee
+Route::get('/emp/registration',[EmployeeController::class,'registration'])->name('employee.registration');
+Route::post('/emp/registration',[EmployeeController::class,'registrationSubmit'])->name('employee.registration');

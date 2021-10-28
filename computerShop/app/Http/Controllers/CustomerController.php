@@ -8,7 +8,7 @@ use App\Models\Customer;
 class CustomerController extends Controller
 {
     public function registration(){
-        return view('pages.reg');
+        return view('pages.customers.reg');
     }
     public function registrationSubmit(Request $request){
      
@@ -35,7 +35,7 @@ class CustomerController extends Controller
     public function customerList(){
         
         $customers = Customer::all();
-        return view('pages.customerList')->with('customers',$customers);
+        return view('pages.customers.customerList')->with('customers',$customers);
     }
     
 }

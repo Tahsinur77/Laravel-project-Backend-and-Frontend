@@ -14,9 +14,13 @@
      @yield('products')
   </div>
 
-  <div>
-     @yield('addProducts')
-  </div>
-  
-</body>
-</html>
+    <body>
+        <div>
+            @yield('products')
+        </div>
+
+        <div>
+            @yield('addProducts')
+        </div>
+    </body>
+    </html>
