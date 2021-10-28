@@ -21,3 +21,4 @@ Route::get('/login',[LoginController::class,'login'])->name('login');
 //Registration
 Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('/registration',[CustomerController::class,'registrationSubmit'])->name('customer.registration');
+Route::get('/customer/list',[CustomerController::class,'customerList'])->name('customer.list');

@@ -32,5 +32,10 @@ class CustomerController extends Controller
         $var->save();
         return "ok";     
     }
+    public function customerList(){
+        
+        $customers = Customer::all();
+        return view('pages.customerList')->with('customers',$customers);
+    }
     
 }
