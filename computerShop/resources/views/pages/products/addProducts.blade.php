@@ -1,8 +1,9 @@
 @extends('Layouts.app')
 @section('addProducts')
 
-  <form action="">
+  <form action="{{route('products')}}" method = "post">
     
+    {{csrf_field()}}
     <label for="category">Category:</label>
     <input type="text" id="category" name="category"><br><br>
 
@@ -12,51 +13,45 @@
     <label for="pname">Product name:</label>
     <input type="text" id="pname" name="pname"><br><br>
 
-    <label for="category">Price:</label>
+    <label for="price">Price:</label>
     <input type="text" id="price" name="price"><br><br>
 
     <label for="specification">Product Specification:</label>
 
-    @php ($component = 0)
-    @php ($model = 0)
-        
-
-    <div id = "more">
-      <label for="component">Component</label>
-      <input type="text" id = "compo{{$component}}" name = "comp{{$component}}">
-
-      <label for="model">Model</label>
-      <input type="text" id = "model{{$model}}" name = "model{{$model}}">
-
-      @php ($component=$component+1)
-      @php ($model=$model+1)
-      
-      <br><br>
-    </div>
-    <div id = "result" ></div>
-
-
-
-
-
-    <input type ="button" id="myButton" value="Add more">
     
 
+    <table class = "table table-bordered" id = "specification">
 
-    <script>
-      var x = 1;
-          $(document).ready(function(){
-            $("#myButton").click(function(){
-              var template = $( $('#more').html() );
-              $("#result").append(template.clone().attr('id','more'));
-              x = x+1;
-              var input = document.createElement('input');
-              input.setAttribute("id",x);
-              input.setAttribute("name",x);
-            
-            });
-          });
-    </script>
+    <tr>
+      <th>Component</th>
+      <th>Model</th>
+      <th>Button</th>
+    </tr>
+
+    <tr>
+      <td><input type="text" name = "component[]" id = "component" class = "form-control name-list"></td>
+      <td><input type="text" name = "model[]" id = "model" class = "form-control name-list"></td>
+      <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td> 
+      
+    </tr>
+
+    </table>
+
+    <script>  
+      $(document).ready(function(){  
+            var i=1;  
+            $('#add').click(function(){  
+                i++;  
+                $('#specification').append('<tr id="row'+i+'"><td><input type="text" name="component[]"  class="form-control name_list" /></td><td><input type="text" name="model[]"  class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
+                
+            });  
+            $(document).on('click', '.btn_remove', function(){  
+                var button_id = $(this).attr("id");   
+                $('#row'+button_id+'').remove();  
+            });  
+             
+      });  
+      </script>
 
 
 
@@ -65,6 +60,3 @@
   
 
 @endsection
-
-
-
