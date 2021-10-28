@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,6 @@ Route::get('/', function () {
     return view('pages.reg');
 });
 Route::get('/login',[LoginController::class,'login'])->name('login');
+//Registration
+Route::get('/registration',[CustomerController::class,'registration'])->name('customer.registration');
+Route::post('/registration',[CustomerController::class,'registrationSubmit'])->name('customer.registration');
