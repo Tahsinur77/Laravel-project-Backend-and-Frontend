@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,5 @@ Route::get('/', function () {
     return view('pages.reg');
 });
 Route::get('/login',[LoginController::class,'login'])->name('login');
+
+Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
