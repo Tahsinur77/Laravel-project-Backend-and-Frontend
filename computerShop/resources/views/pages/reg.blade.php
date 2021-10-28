@@ -65,6 +65,11 @@
 						<input class="input100" type="email" name="email" placeholder="Type your email">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
+					<div class="wrap-input100 validate-input" data-validate="Address is required">
+						<span class="label-input100">Address</span>
+						<input class="input100" type="text" name="address" placeholder="Type your Address">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
                     <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
 						<span class="label-input100">Date of birth</span>
 						<input class="input100" type="date" name="dob" placeholder="Type your date of birth">
