@@ -2,11 +2,12 @@
 @section('products')
 
   {{$pname}}
-  {{$count}}
 
-  @foreach($specification as $x)
 
-  {{$x}}
+
+  @foreach($specification as $x => $x_value)
+
+  <p>{{$x}} {{$x_value}}</p>
 
   <br>
   
