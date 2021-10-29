@@ -7,6 +7,8 @@
   @foreach($specification as $x)
 
   {{$x}}
+
+  <br>
   
   @endforeach
 
