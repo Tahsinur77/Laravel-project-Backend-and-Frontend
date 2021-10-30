@@ -13,40 +13,40 @@
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="cName" value="{{old('cName')}}" placeholder="Type your username">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
 						<input class="input100" type="password" name="pass" placeholder="Type your password">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100"></span>
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Confirm Password</span>
 						<input class="input100" type="password" name="confirmPass" placeholder="Retype your password">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100"></span>
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate="Phone number is required">
 						<span class="label-input100">Phone number</span>
 						<input class="input100" type="text" name="pNumber" value="{{old('pNumber')}}" placeholder="Type your phone number">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100"></span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate="Email is required">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="email" name="email" value="{{old('email')}}" placeholder="Type your email">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100" ></span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Address is required">
 						<span class="label-input100">Address</span>
 						<input class="input100" type="text" name="address" value="{{old('address')}}" placeholder="Type your Address">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100" ></span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
 						<span class="label-input100">Date of birth</span>
 						<input class="input100" type="date" name="dob" value="{{old('dob')}}" placeholder="Type your date of birth">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<span class="focus-input100" ></span>
 					</div>
 					
 					<div class="text-right p-t-8 p-b-31">
@@ -65,9 +65,8 @@
 					</div>
 
 					<div class="txt1 text-center p-t-54 p-b-20">
-					
 						<a href="#" class="txt2">
-							Sign in
+							<b>Sign in<b>
 						</a>
 						
 					</div>
