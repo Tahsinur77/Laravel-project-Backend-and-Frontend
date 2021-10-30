@@ -1,7 +1,7 @@
 @extends('Layouts.app')
 @section('addProducts')
 
-  <form action="{{route('products')}}" method = "post">
+  <form action="{{route('products')}}" method = "post" enctype="multipart/form-data">
     
     {{csrf_field()}}
     <label for="category">Category:</label>
@@ -15,6 +15,13 @@
 
     <label for="price">Price:</label>
     <input type="text" id="price" name="price"><br><br>
+
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity"><br><br>
+
+    <input type="file" id="pic" name="pic">
+    <label for="pic">Add Picture:</label>
+    
 
     <label for="specification">Product Specification:</label>
 
@@ -37,7 +44,9 @@
 
     </table>
 
-    <script>  
+    <script src = "{{asset('js/addProduct.js')}}"> </script>
+
+    <!-- <script>  
       $(document).ready(function(){  
             var i=1;  
             $('#add').click(function(){  
@@ -51,9 +60,7 @@
             });  
              
       });  
-      </script>
-
-
+      </script> -->
 
     <input type="submit" value="Submit">
   </form>

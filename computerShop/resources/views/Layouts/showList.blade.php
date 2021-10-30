@@ -9,26 +9,11 @@
     <link rel="stylesheet" href="{{asset('css/topnav.css')}}">
 </head>
 
-<body>
-    <!-- @include('inc.topnav') -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-    </div>
+<body>  
+    @include('inc.topnav')
     <div>@yield('content')</div>
 </body>
 
 </html>
-<!-- <script src = "{{asset('js/topnav.js')}}"></script>  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

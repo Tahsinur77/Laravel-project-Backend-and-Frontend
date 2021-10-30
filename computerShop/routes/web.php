@@ -39,6 +39,10 @@ Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCus
 //Products
 Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
 Route::post('/products/details',[ProductController::class,'products'])->name('products');
+Route::get('/products/findings',[ProductController::class,'findings'])->name('products.findings');
+Route::get('/products/list/{category}',[ProductController::class,'productListByCategory'])->name('products.category.item');
+Route::get('/products/list/{category}/{type}',[ProductController::class,'productListByType'])->name('products.category.item');
+
 
 //Empolyee
 Route::get('/employee/registration',[EmployeeController::class,'registration'])->name('employee.registration');
