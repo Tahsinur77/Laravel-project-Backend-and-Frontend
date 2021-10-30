@@ -15,11 +15,7 @@ class ProductController extends Controller
 
     public function products(Request $req){
 
-        $pname = $req->pname;
-        $category = $req->category;
-        $type = $req->type;
-        $price = $req->price;
-        $quantity = $req->quantity;
+        
         if($req->hasFile('pic')){
             $pic = time().'_'.$req->file('pic')->getClientOriginalName();
             $req->file('pic')->storeAs('uploads',$pic,'public');
@@ -57,10 +53,12 @@ class ProductController extends Controller
 
     public function findings(){
         $categorys = Product::select('pCategory')->pluck('pCategory');
+        $categorys = $categorys->unique();
         session()->put('pCategorys',json_encode($categorys));
 
         foreach($categorys as $category){
             $types = Product::select('pType')->where('pCategory',$category)->pluck('pType');
+            $types =$types->unique();
             session()->put($category,json_encode($types));
         }
 
@@ -71,16 +69,79 @@ class ProductController extends Controller
 
     public function productListByCategory(Request $req){
         $categoryName = $req->category;
-        $products = Product::where('pCategory',$categoryName)->get();
-        return $products;
+        $allProducts = Product::where('pCategory',$categoryName)->get();
+
+        $products = array();
+
+        foreach($allProducts as $product){
+            $var= new Product();
+            $var->id = $product->id;
+            $var->pName = $product->pName;
+            $var->pCategory = $product->pCategory;
+            $var->pType = $product->pType;
+            $var->pPrice = $product->pPrice;
+            $var->pQuantity = $product->pQuantity;
+            $var->pPicture = 'storage/uploads/'.$product->pPicture;
+            $var->pSpecification = json_decode($product->pSpecification);
+           
+            
+
+            $miniSpecification  =array();
+
+            $check = 0;
+            foreach(json_decode($product->pSpecification) as $spe){
+                array_push($miniSpecification,$spe);
+                $check++;
+
+                if($check == 3) break;
+            }
+
+            $var->miniSpecifications = $miniSpecification;
+
+            array_push($products,$var);
+        }
+        
+
+        return view('pages.products.products')
+        ->with('products',$products);
     }
 
 
     public function productListByType(Request $req){
         $categoryName = $req->category;
         $typeName = $req->type;
-        $products = Product::where(['pCategory'=>$categoryName,'pType'=>$typeName])->get();
-        return $products;
+        $allProducts = Product::where(['pCategory'=>$categoryName,'pType'=>$typeName])->get();
+
+        $products = array();
+
+        foreach($allProducts as $product){
+            $var= new Product();
+            $var->id = $product->id;
+            $var->pName = $product->pName;
+            $var->pCategory = $product->pCategory;
+            $var->pType = $product->pType;
+            $var->pPrice = $product->pPrice;
+            $var->pQuantity = $product->pQuantity;
+            $var->pPicture = 'storage/uploads/'.$product->pPicture;
+            $var->pSpecification = json_decode($product->pSpecification);
+
+            $miniSpecification  =array();
+
+            $check = 0;
+            foreach(json_decode($product->pSpecification) as $spe){
+                array_push($miniSpecification,$spe);
+                $check++;
+
+                if($check == 3) break;
+            }
+
+            $var->miniSpecifications = $miniSpecification;
+
+            array_push($products,$var);
+        }
+
+        return view('pages.products.products')
+        ->with('products',$products);
     }
     
 }

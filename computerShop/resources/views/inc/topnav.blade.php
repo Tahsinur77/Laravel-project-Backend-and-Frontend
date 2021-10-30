@@ -12,7 +12,7 @@
     @foreach(json_decode(session($category)) as $type)
     <a href="/products/list/{{$category}}/{{$type}}">{{$type}}</a>
     @endforeach
-    <a href="#">Show All</a>
+    <a href="/products/list/{{$category}}">Show All</a>
   </div>
 
 </div> 
