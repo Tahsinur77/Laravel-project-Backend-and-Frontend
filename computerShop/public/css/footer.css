@@ -1,0 +1,121 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+.f-container
+{
+	max-width: 100%;
+	margin: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.f-row
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.footer
+{
+	background: #081621;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 20px;
+}
+
+.footer p
+{
+	color: #8a8a8a;
+}
+
+.footer h3
+{
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.f-col1, .f-col2, .f-col3, .f-col4
+{
+	min-width: 250px;
+	margin-bottom: 20px;
+}
+
+.f-col1
+{
+	flex-basis: 30%;
+}
+
+.f-col2
+{
+	flex: 1;
+	text-align: center;
+}
+
+.f-col2 img
+{
+	width: 180px;
+	margin-bottom: 20px;
+}
+
+.f-col3, .f-col4
+{
+	flex-basis: 12%;
+	text-align: center;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+ul li
+{
+	margin-bottom: 25px;
+}
+
+ul li img
+{
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+}
+
+.app-logo
+{
+	margin-top: 20px;
+}
+
+.app-logo img
+{
+	width: 160px;
+}
+
+.footer hr
+{
+	border: none;
+	background: #b5b5b5;
+	height: 1px;
+	margin: 20px 0;
+}
+
+.f-row2
+{
+	display: flex;
+
+	flex-wrap: wrap;
+	/* #align-items: center; */
+	text-align: center;
+	justify-content: space-around;
+}
+
+a{
+	color: #8a8a8a;
+	text-decoration: none;
+}

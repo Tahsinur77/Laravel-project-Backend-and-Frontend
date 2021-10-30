@@ -13,33 +13,30 @@
                 <div class="wrap-input100 validate-input m-b-23" data-validate="Username is required">
                     <span class="label-input100">Customer</span>
                     <input class="input100" type="text" name="cName" value="{{$customer->cName}}">
-                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    <span class="focus-input100"></span>
                 </div>
-
-               
-
 
                 <div class="wrap-input100 validate-input" data-validate="Phone number is required">
                     <span class="label-input100">Phone number</span>
                     <input class="input100" type="text" name="pNumber" value="{{$customer->pNumber}}">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Email is required">
                     <span class="label-input100">Email</span>
                     <input class="input100" type="email" name="email" value="{{$customer->email}}">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Address is required">
                     <span class="label-input100">Address</span>
                     <input class="input100" type="text" name="address" value="{{$customer->address}}">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
                     <span class="label-input100">Date of birth</span>
                     <input class="input100" type="date" name="dob" value="{{$customer->dob}}">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    <span class="focus-input100"></span>
                 </div>
 
                 <br>
@@ -51,7 +48,6 @@
                         </button>
                     </div>
                 </div>
-
         </div>
         </form>
     </div>
