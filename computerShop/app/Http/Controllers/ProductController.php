@@ -59,14 +59,9 @@ class ProductController extends Controller
         $categorys = Product::select('pCategory')->pluck('pCategory');
         session()->put('pCategorys',json_encode($categorys));
 
-
-
         foreach($categorys as $category){
             $types = Product::select('pType')->where('pCategory',$category)->pluck('pType');
-
             session()->put($category,json_encode($types));
-
-            //return session($category);
         }
 
         return redirect()->route('customer.list');
@@ -74,8 +69,18 @@ class ProductController extends Controller
     }
 
 
-    public function productList(){
-        
+    public function productListByCategory(Request $req){
+        $categoryName = $req->category;
+        $products = Product::where('pCategory',$categoryName)->get();
+        return $products;
+    }
+
+
+    public function productListByType(Request $req){
+        $categoryName = $req->category;
+        $typeName = $req->type;
+        $products = Product::where(['pCategory'=>$categoryName,'pType'=>$typeName])->get();
+        return $products;
     }
     
 }

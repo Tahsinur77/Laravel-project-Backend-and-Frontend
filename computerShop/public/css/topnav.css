@@ -1,6 +1,12 @@
+.navbar{
+  background-color: white;
+  border: 1px;
+  border-bottom: 2px solid blue;
+}
+
 .dropbtn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -27,8 +33,11 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: blue;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  color: red;
+  border-bottom: 3px solid rgb(95, 92, 94);
+}
