@@ -41,3 +41,6 @@ Route::post('/products/details',[ProductController::class,'products'])->name('pr
 Route::get('/employee/registration',[EmployeeController::class,'registration'])->name('employee.registration');
 Route::post('/employee/registration/submit',[EmployeeController::class,'registrationSubmit'])->name('employee.registration.submit');
 Route::get('/employee/list',[EmployeeController::class,'employeeList'])->name('employee.list');
+Route::get('/employee/edit/{id}/{eName}',[EmployeeController::class,'edit'])->name('employee.edit');
+Route::post('/employee/edit',[EmployeeController::class,'editSubmit'])->name('employee.edit.submit');
+Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp']);

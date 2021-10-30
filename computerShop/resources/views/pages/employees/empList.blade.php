@@ -19,7 +19,8 @@
             <td>{{$employee->email}}</td>
             <td>{{$employee->address}}</td>
             <td>{{$employee->dob}}</td>
-            <td><a href=>Edit</a></td>
+            <td><a href="/employee/edit/{{$employee->id}}/{{$employee->eName}}">Edit</a></td>
+            <td><a href="/employee/delete/{{$employee->id}}/{{$employee->eName}}">Delete</a></td>
         </tr>
         @endforeach
     </table>
