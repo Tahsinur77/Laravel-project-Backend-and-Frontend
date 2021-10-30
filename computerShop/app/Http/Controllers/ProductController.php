@@ -37,6 +37,7 @@ class ProductController extends Controller
         $var = new product();
         $var->pName = $req->pname;
         $var->pCategory = $req->category;
+        $var->pId = $req->pId;
         $var->pType = $req->type;
         $var->pPrice = $req->price;
         $var->pQuantity = $req->quantity;
@@ -45,9 +46,7 @@ class ProductController extends Controller
         $var->save();
         
 
-        return view('pages.products.products')
-            ->with('pname',$pname)
-            ->with('specification',$specification);
+        return redirect()->route('products.findings');
             
     }
 
@@ -79,6 +78,7 @@ class ProductController extends Controller
             $var->pName = $product->pName;
             $var->pCategory = $product->pCategory;
             $var->pType = $product->pType;
+            $var->pId = $product->pId;
             $var->pPrice = $product->pPrice;
             $var->pQuantity = $product->pQuantity;
             $var->pPicture = 'storage/uploads/'.$product->pPicture;
@@ -120,6 +120,7 @@ class ProductController extends Controller
             $var->pName = $product->pName;
             $var->pCategory = $product->pCategory;
             $var->pType = $product->pType;
+            $var->pId = $product->pId;
             $var->pPrice = $product->pPrice;
             $var->pQuantity = $product->pQuantity;
             $var->pPicture = 'storage/uploads/'.$product->pPicture;
