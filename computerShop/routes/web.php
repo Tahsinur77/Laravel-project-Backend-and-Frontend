@@ -36,6 +36,7 @@ Route::get('/customer/list',[CustomerController::class,'customerList'])->name('c
 //Products
 Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
 Route::post('/products/details',[ProductController::class,'products'])->name('products');
+Route::get('/products/findings',[ProductController::class,'findings'])->name('products.findings');
 
 //Empolyee
 Route::get('/employee/registration',[EmployeeController::class,'registration'])->name('employee.registration');

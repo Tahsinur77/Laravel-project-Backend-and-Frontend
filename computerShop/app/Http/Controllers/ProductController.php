@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\product;
 
+
 class ProductController extends Controller
 {
     //
@@ -52,6 +53,24 @@ class ProductController extends Controller
             ->with('pname',$pname)
             ->with('specification',$specification);
             
+    }
+
+    public function findings(){
+        $categorys = Product::select('pCategory')->pluck('pCategory');
+        session()->put('pCategorys',json_encode($categorys));
+
+
+
+        foreach($categorys as $category){
+            $types = Product::select('pType')->where('pCategory',$category)->pluck('pType');
+
+            session()->put($category,json_encode($types));
+
+            //return session($category);
+        }
+
+        return redirect()->route('customer.list');
+
     }
 
 
