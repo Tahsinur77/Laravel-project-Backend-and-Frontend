@@ -32,6 +32,9 @@ Route::get('/login',[LoginController::class,'login'])->name('login');
 Route::get('/customer/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('customer/registration/submit',[CustomerController::class,'registrationSubmit'])->name('customer.registration.submit');
 Route::get('/customer/list',[CustomerController::class,'customerList'])->name('customer.list');
+Route::get('/customer/edit/{id}/{cName}',[CustomerController::class,'edit'])->name('customer.edit');
+Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('customer.edit.submit');
+Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
 
 //Products
 Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
