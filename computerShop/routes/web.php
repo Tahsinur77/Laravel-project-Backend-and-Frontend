@@ -32,6 +32,9 @@ Route::get('/login',[LoginController::class,'login'])->name('login');
 Route::get('/customer/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('customer/registration/submit',[CustomerController::class,'registrationSubmit'])->name('customer.registration.submit');
 Route::get('/customer/list',[CustomerController::class,'customerList'])->name('customer.list');
+Route::get('/customer/edit/{id}/{cName}',[CustomerController::class,'edit'])->name('customer.edit');
+Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('customer.edit.submit');
+Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
 
 //Products
 Route::get('/products',[ProductController::class,'addProducts'])->name('addproducts');
@@ -45,3 +48,6 @@ Route::get('/products/list/{category}/{type}',[ProductController::class,'product
 Route::get('/employee/registration',[EmployeeController::class,'registration'])->name('employee.registration');
 Route::post('/employee/registration/submit',[EmployeeController::class,'registrationSubmit'])->name('employee.registration.submit');
 Route::get('/employee/list',[EmployeeController::class,'employeeList'])->name('employee.list');
+Route::get('/employee/edit/{id}/{eName}',[EmployeeController::class,'edit'])->name('employee.edit');
+Route::post('/employee/edit',[EmployeeController::class,'editSubmit'])->name('employee.edit.submit');
+Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp']);
