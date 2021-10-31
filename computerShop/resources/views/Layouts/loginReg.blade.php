@@ -32,7 +32,8 @@
 </head>
 
 <body>
-    @include('inc.topnav')
+    @include('inc.header')
+    
     <div>
         @yield('content')
     </div>

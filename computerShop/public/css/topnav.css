@@ -1,20 +1,8 @@
-.navbar{
-  background-color: white;
-  border: 1px;
-  border-bottom: 2px solid blue;
-}
-
-.dropbtn {
-  background-color: white;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
 
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-left: 30px;
 }
 
 .dropdown-content {
@@ -33,7 +21,7 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: blue;}
+.dropdown-content a:hover {background-color:greenyellow;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
