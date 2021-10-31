@@ -15,11 +15,10 @@ class CustomerController extends Controller
         $this->validate(
             $request,
             [
-                'cName'=>'required',
-                'pass'=>'required|min:4',
+                'cName'=>'required|min:3|regex:/^[a-zA-Z\s]*$/',
+                'pass'=>'required|min:4|same:confirmPass',
                 'confirmPass'=>'required|min:4',
-                'confirmPass'=>'confirmed',
-                'pNumber'=>'required|regex:/^[0-9]*$/',
+                'pNumber'=>'required|regex:/^[0-9]*$/|unique:customers',
                 'email'=>'required',
                 'address'=>'required',
                 'dob'=>'required'
@@ -28,7 +27,8 @@ class CustomerController extends Controller
             [
                 'cName.required'=>'Please put your name',
                 'cName.min'=>'Name must be greater than 2 charcters',
-                'pass.min'=>'Password must be greater than 4 charcters',
+                'pNumber.unique'=>'Phone number already used',
+                
                 
             ]
         );

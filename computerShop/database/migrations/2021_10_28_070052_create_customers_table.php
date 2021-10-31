@@ -17,7 +17,7 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('cName',100);
             $table->string('pass',100);
-            $table->string('pNumber',20);
+            $table->string('pNumber',20)->unique();
             $table->string('email',100);
             $table->string('address',200);
             $table->string('dob',50);

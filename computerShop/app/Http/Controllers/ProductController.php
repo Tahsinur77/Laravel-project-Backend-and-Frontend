@@ -20,7 +20,7 @@ class ProductController extends Controller
             [
                 'category'=>'required',
                 'type'=>'required',
-                'pId'=>'required| regex:/^[a-zA-Z0-9_.-]*$/',
+                'pId'=>'required| regex:/^[a-zA-Z0-9_.-]*$/|unique:products',
                 'pname'=>'required',
                 'price'=>'required|numeric|gt:0',
                 'quantity'=>'required|numeric|gt:0',
