@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\welcomeController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,7 +47,7 @@ Route::get('/addproducts',[ProductController::class,'addProducts'])->middleware(
 Route::post('/products/list',[ProductController::class,'products'])->name('products');
 Route::get('/products/list/{category}',[ProductController::class,'productListByCategory'])->name('products.category.item');
 Route::get('/products/list/{category}/{type}',[ProductController::class,'productListByType'])->name('products.category.item');
-
+Route::get('/productDetails/{id}',[ProductController::class,'productDetails'])->name('productDetails');
 
 //Empolyee
 Route::get('/employee/registration',[EmployeeController::class,'registration'])->name('employee.registration');
@@ -55,3 +56,8 @@ Route::get('/employee/list',[EmployeeController::class,'employeeList'])->name('e
 Route::get('/employee/edit/{id}/{eName}',[EmployeeController::class,'edit'])->name('employee.edit');
 Route::post('/employee/edit',[EmployeeController::class,'editSubmit'])->name('employee.edit.submit');
 Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp']);
+
+
+
+//Orders
+Route::get('/addtoCart/{id}',[OrderController::class,'addtoCart'])->name('addtocart');
