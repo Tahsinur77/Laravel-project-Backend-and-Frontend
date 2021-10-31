@@ -12,6 +12,8 @@
 <body>  
     @include('inc.topnav')
     <div>@yield('content')</div>
+
+    @include('inc.Footer')
 </body>
 
 </html>
