@@ -16,19 +16,19 @@ class CustomerController extends Controller
             $request,
             [
                 'cName'=>'required',
-                'pass'=>'required|',
+                'pass'=>'required|min:4',
+                'confirmPass'=>'required|min:4',
+                'confirmPass'=>'confirmed',
                 'pNumber'=>'required|regex:/^[0-9]*$/',
                 'email'=>'required',
                 'address'=>'required',
-                'dob'=>'required',
-                'pass'=>'required',
-                'confirmPass'=>'confirmed'
+                'dob'=>'required'
                 
             ],
             [
                 'cName.required'=>'Please put your name',
                 'cName.min'=>'Name must be greater than 2 charcters',
-                'pass.min'=>'Password must be greater than 3 charcters',
+                'pass.min'=>'Password must be greater than 4 charcters',
                 
             ]
         );

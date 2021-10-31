@@ -8,7 +8,7 @@
     <div class="row g-3">
       <div class="col-md-4">
         <label for="category" class="form-label">Category:</label>
-        <input type="text" class="form-control" id="category" name="category">
+        <input type="text" class="form-control" id="category" name="category"  value="{{old('category')}}">
         @error('category')
                 <span class="text-danger">{{$message}}</span>
         @enderror
@@ -16,7 +16,7 @@
 
       <div class="col-md-4">
         <label for="type" class="form-label">Type:</label>
-        <input type="text" class="form-control" id="type" name="type">
+        <input type="text" class="form-control" id="type" name="type"  value="{{old('type')}}">
         @error('type')
                 <span class="text-danger">{{$message}}</span>
         @enderror
@@ -27,7 +27,7 @@
     <div class="row g-3">
       <div class="col-md-4">
         <label for="pId" class="form-label">Product ID:</label>
-        <input type="text" class="form-control" id="pId" name="pId">
+        <input type="text" class="form-control" id="pId" name="pId"  value="{{old('pId')}}">
         @error('pId')
                 <span class="text-danger">{{$message}}</span>
         @enderror
@@ -35,7 +35,7 @@
 
       <div class="col-md-4">
         <label for="pname" class="form-label">Product name:</label>
-        <input type="text" class="form-control" id="pname" name="pname">
+        <input type="text" class="form-control" id="pname" name="pname"  value="{{old('pname')}}">
         @error('pname')
                 <span class="text-danger">{{$message}}</span>
         @enderror
@@ -46,7 +46,7 @@
     <div class="row g-3">
       <div class="col-md-4">
         <label for="price" class="form-label">Price:</label>
-        <input type="text" class="form-control" id="price" name="price">
+        <input type="text" class="form-control" id="price" name="price" value="{{old('price')}}">
         @error('price')
                 <span class="text-danger">{{$message}}</span>
         @enderror
@@ -54,7 +54,7 @@
 
       <div class="col-md-4">
         <label for="quantity" class="form-label">Quantity:</label>
-        <input type="text" class="form-control" id="quantity" name="quantity">
+        <input type="text" class="form-control" id="quantity" name="quantity" value="{{old('quantity')}}">
         @error('quantity')
                 <span class="text-danger">{{$message}}</span>
         @enderror
