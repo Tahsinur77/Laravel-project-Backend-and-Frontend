@@ -9,14 +9,17 @@
                     Add Empolyee
                 </span>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
+                <div class="wrap-input100 validate-input m-b-23">
                     <span class="label-input100">Employee</span>
-                    <input class="input100" type="text" name="eName" value="{{old('eName')}}"
+                    <input class="input100" type="text" id="eName" name="eName" value="{{old('eName')}}"
                         placeholder="Type employee name">
                     <span class="focus-input100"></span>
+                    @error('eName')
+                		<span class="text-danger">{{$message}}</span>
+           			@enderror
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="Employee type is reauired">
+                <div class="wrap-input100 validate-input m-b-23">
                     <span class="label-input100">Choose employee type:</span>
                     <select id="empType" name="empType">
                         <option value="admin">Admin</option>
@@ -24,43 +27,64 @@
                         <option value="salesman">Salesman</option>
                     </select>
                     <span class="focus-input100"></span>
+                    @error('empType')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Password</span>
-                    <input class="input100" type="password" name="pass" placeholder="Type your password">
+                    <input class="input100" type="password" id="pass" name="pass" placeholder="Type your password">
                     <span class="focus-input100"></span>
+                    @error('pass')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Confirm Password</span>
-                    <input class="input100" type="password" name="confirmPass" placeholder="Retype your password">
+                    <input class="input100" type="password" id="confirmPass" name="confirmPass" placeholder="Retype your password">
                     <span class="focus-input100"></span>
+                    @error('confirmPass')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Phone number is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Phone number</span>
-                    <input class="input100" type="text" name="pNumber" value="{{old('pNumber')}}"
+                    <input class="input100" type="text" id="pNumber" name="pNumber" value="{{old('pNumber')}}"
                         placeholder="Type your phone number">
                     <span class="focus-input100"></span>
+                    @error('pNumber')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Email is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Email</span>
-                    <input class="input100" type="email" name="email" value="{{old('email')}}"
+                    <input class="input100" type="email" id="email" name="email" value="{{old('email')}}"
                         placeholder="Type your email">
                     <span class="focus-input100"></span>
+                    @error('email')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Address is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Address</span>
-                    <input class="input100" type="text" name="address" value="{{old('address')}}"
+                    <input class="input100" type="text" id="address" name="address" value="{{old('address')}}"
                         placeholder="Type your Address">
                     <span class="focus-input100"></span>
+                    @error('address')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
+                <div class="wrap-input100 validate-input" >
                     <span class="label-input100">Date of birth</span>
-                    <input class="input100" type="date" name="dob" value="{{old('dob')}}"
+                    <input class="input100" type="date" id="dob"  name="dob" value="{{old('dob')}}"
                         placeholder="Type your date of birth">
                     <span class="focus-input100"></span>
+                    @error('dob')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
                 </div>
 
                 <br>
@@ -74,7 +98,7 @@
                 </div>
 
                 <div class="txt1 text-center p-t-54 p-b-20">
-                    <a href="#" class="txt2">
+                    <a href="{{route('login')}}" class="txt2">
                         <b>Sign in<b>
                     </a>
 

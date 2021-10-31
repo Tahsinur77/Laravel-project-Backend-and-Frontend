@@ -10,6 +10,27 @@ class EmployeeController extends Controller
         return view('pages.employees.empReg');
     }
     public function registrationSubmit(Request $request){
+        $this->validate(
+            $request,
+            [
+                'eName'=>'required|min:3|regex:/^[a-zA-Z\s]*$/',
+                'empType'=>'required',
+                'pass'=>'required|min:4|same:confirmPass',
+                'confirmPass'=>'required|min:4',
+                'pNumber'=>'required|regex:/^[0-9]*$/|unique:customers',
+                'email'=>'required',
+                'address'=>'required',
+                'dob'=>'required'
+                
+            ],
+            [
+                'eName.required'=>'Please put your name',
+                'eName.min'=>'Name must be greater than 2 charcters',
+                'pNumber.unique'=>'Phone number already used',
+                
+                
+            ]
+        );
         $var = new Employee();
         $var->eName= $request->eName; 
         $var->empType = $request->empType;

@@ -18,7 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('eName',100);
             $table->string('empType',100);
             $table->string('pass',100);
-            $table->string('pNumber',20);
+            $table->string('pNumber',20)->unique();
             $table->string('email',100);
             $table->string('address',200);
             $table->string('dob',50);
