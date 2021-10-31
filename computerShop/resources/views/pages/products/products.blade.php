@@ -1,10 +1,11 @@
 @extends('Layouts.app')
 @section('products')
 
+<div class="row">
   @foreach($products as $product)
-
-  <div class="card" style="width: 20rem;">
-    <img class="card-img-top" src="{{asset($product->pPicture)}}" width="200" height="200">
+  <div class="col-sm-3">
+  <div class="card" style="width: 20rem, height: 6rem;">
+    <img class="card-img-top" src="{{asset($product->pPicture)}}" width="200" height="300">
     <div class="card-body">
       <h5 class="card-title">{{$product->pName}}</h5>
     </div>
@@ -18,7 +19,9 @@
       <a href="#" class="card-link">Another link</a>
     </div>
   </div>
+  </div>
   
   @endforeach
+</div>
 
 @endsection
