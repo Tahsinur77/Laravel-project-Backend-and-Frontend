@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('pCategory',100);
             $table->string('pType',100);
             $table->string('pName',100);
+            $table->string('pId',100)->unique();
             $table->string('pPrice',100);
             $table->string('pQuantity',100);
             $table->string('pPicture',100);

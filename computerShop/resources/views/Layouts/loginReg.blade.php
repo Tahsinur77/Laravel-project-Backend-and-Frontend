@@ -27,12 +27,18 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('css/topnav.css')}}">
+
 </head>
 
 <body>
+    @include('inc.header')
+    
     <div>
         @yield('content')
     </div>
+
+    @include('inc.Footer')
 
 </body>
 

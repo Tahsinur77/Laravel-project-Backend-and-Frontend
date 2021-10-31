@@ -37,6 +37,7 @@ class ProductController extends Controller
         $var = new product();
         $var->pName = $req->pname;
         $var->pCategory = $req->category;
+        $var->pId = $req->pId;
         $var->pType = $req->type;
         $var->pPrice = $req->price;
         $var->pQuantity = $req->quantity;
@@ -45,26 +46,10 @@ class ProductController extends Controller
         $var->save();
         
 
-        return view('pages.products.products')
-            ->with('pname',$pname)
-            ->with('specification',$specification);
+        return redirect()->route('products.findings');
             
     }
 
-    public function findings(){
-        $categorys = Product::select('pCategory')->pluck('pCategory');
-        $categorys = $categorys->unique();
-        session()->put('pCategorys',json_encode($categorys));
-
-        foreach($categorys as $category){
-            $types = Product::select('pType')->where('pCategory',$category)->pluck('pType');
-            $types =$types->unique();
-            session()->put($category,json_encode($types));
-        }
-
-        return redirect()->route('customer.list');
-
-    }
 
 
     public function productListByCategory(Request $req){
@@ -79,6 +64,7 @@ class ProductController extends Controller
             $var->pName = $product->pName;
             $var->pCategory = $product->pCategory;
             $var->pType = $product->pType;
+            $var->pId = $product->pId;
             $var->pPrice = $product->pPrice;
             $var->pQuantity = $product->pQuantity;
             $var->pPicture = 'storage/uploads/'.$product->pPicture;
@@ -120,6 +106,7 @@ class ProductController extends Controller
             $var->pName = $product->pName;
             $var->pCategory = $product->pCategory;
             $var->pType = $product->pType;
+            $var->pId = $product->pId;
             $var->pPrice = $product->pPrice;
             $var->pQuantity = $product->pQuantity;
             $var->pPicture = 'storage/uploads/'.$product->pPicture;
