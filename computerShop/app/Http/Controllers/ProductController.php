@@ -46,7 +46,7 @@ class ProductController extends Controller
         $var->save();
         
 
-        return redirect()->route('');
+        return redirect()->route('addproducts');
             
     }
 

@@ -24,6 +24,8 @@ use App\Http\Controllers\welcomeController;
 // });
 
 Route::get('/',[welcomeController::class,'welcome'])->middleware('NavBarFindings')->name('welcome');
+Route::get('/about', [welcomeController::class,'about'])->name('about');
+Route::get('/contact', [welcomeController::class,'contact'])->name('contact');
 
 
 //Login
@@ -40,7 +42,7 @@ Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('cu
 Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
 
 //Products
-Route::get('/addproducts',[ProductController::class,'addProducts'])->name('addproducts');
+Route::get('/addproducts',[ProductController::class,'addProducts'])->middleware('NavBarFindings')->name('addproducts');
 Route::post('/products/list',[ProductController::class,'products'])->name('products');
 Route::get('/products/list/{category}',[ProductController::class,'productListByCategory'])->name('products.category.item');
 Route::get('/products/list/{category}/{type}',[ProductController::class,'productListByType'])->name('products.category.item');
