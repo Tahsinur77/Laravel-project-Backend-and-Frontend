@@ -47,6 +47,14 @@
        @yield('productList')
   </div>
 
+  <div>
+       @yield('about')
+  </div>
+
+  <div>
+     @yield('contact')
+  </div>
+
   @include('inc.Footer')
   
 </body>

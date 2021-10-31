@@ -17,7 +17,18 @@ class CustomerController extends Controller
             [
                 'cName'=>'required',
                 'pass'=>'required|',
-                'pNumber'=>'required|regex:/^[0-9]*$/'
+                'pNumber'=>'required|regex:/^[0-9]*$/',
+                'email'=>'required',
+                'address'=>'required',
+                'dob'=>'required',
+                'pass'=>'required',
+                'confirmPass'=>'confirmed'
+                
+            ],
+            [
+                'cName.required'=>'Please put your name',
+                'cName.min'=>'Name must be greater than 2 charcters',
+                'pass.min'=>'Password must be greater than 3 charcters',
                 
             ]
         );

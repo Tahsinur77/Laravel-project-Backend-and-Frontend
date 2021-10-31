@@ -23,8 +23,8 @@
 					<h3>About Us</h3>
 					<!--<p>About Us Text</p>-->
 					<ul>
-						<li><a href="AboutUs.php">About Us</a></li>
-						<li><a href="Contact.php">Contact Us</a></li>
+						<li><a href="{{route('about')}}">About Us</a></li>
+						<li><a href="{{route('contact')}}">Contact Us</a></li>
 						<li>Coupons</li>
 						<li>Blog Post</li>
 					</ul>

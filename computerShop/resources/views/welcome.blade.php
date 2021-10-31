@@ -12,8 +12,8 @@
 			<nav>
 				<ul>
 					<li><a href="">HOME</a></li>
-					<li><a href="">ABOUT US</a></li>
-					<li><a href="">CONTACT US</a></li>
+					<li><a href="{{route('about')}}">ABOUT US</a></li>
+					<li><a href="{{route('contact')}}">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<!-- <img src="images/menu.png" class=""> -->
