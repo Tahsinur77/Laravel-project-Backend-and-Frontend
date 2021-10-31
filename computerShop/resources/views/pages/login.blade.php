@@ -4,20 +4,21 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('{{asset('images/bg-01.jpg')}}');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form action="{{route('login.submit')}}" method="post" class="login100-form validate-form">
+				{{csrf_field()}}
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username">
+					<div class="wrap-input100 validate-input m-b-23" >
+						<span class="label-input100">Phone number</span>
+						<input class="input100" type="text" id="pNumber" name="pNumber" placeholder="Type your username">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<div class="wrap-input100 validate-input" >
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Type your password">
+						<input class="input100" type="password" id="pass" name="pass" placeholder="Type your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					<br>			

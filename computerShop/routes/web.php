@@ -30,6 +30,7 @@ Route::get('/contact', [welcomeController::class,'contact'])->name('contact');
 
 //Login
 Route::get('/login',[LoginController::class,'login'])->name('login');
+Route::post('/login/submit',[LoginController::class,'loginSubmit'])->name('login.submit');
 
 
 
