@@ -143,4 +143,30 @@ class ProductController extends Controller
         ->with('products',$products);
     }
     
+    public function productDetails(Request $req){
+        $id = $req->id;
+        $product = Product::where('id',$id)->first();
+
+        $var= new Product();
+        $var->id = $product->id;
+        $var->pName = $product->pName;
+        $var->pCategory = $product->pCategory;
+        $var->pType = $product->pType;
+        $var->pId = $product->pId;
+        $var->pPrice = $product->pPrice;
+        $var->pQuantity = $product->pQuantity;
+        $var->pPicture = 'storage/uploads/'.$product->pPicture;
+        $var->pSpecification = json_decode($product->pSpecification);
+
+        if($product->pQuantity>0){
+            $status = "In Stock";
+        }
+        else{
+            $status = "Out of Stock";
+        }
+
+        return view('pages.products.productDetails')
+        ->with('productDetails',$var)
+        ->with('status',$status);
+    }
 }
