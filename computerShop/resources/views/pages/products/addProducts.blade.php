@@ -9,11 +9,17 @@
       <div class="col-md-4">
         <label for="category" class="form-label">Category:</label>
         <input type="text" class="form-control" id="category" name="category">
+        @error('category')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
 
       <div class="col-md-4">
         <label for="type" class="form-label">Type:</label>
         <input type="text" class="form-control" id="type" name="type">
+        @error('type')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
     </div>
 
@@ -22,11 +28,17 @@
       <div class="col-md-4">
         <label for="pId" class="form-label">Product ID:</label>
         <input type="text" class="form-control" id="pId" name="pId">
+        @error('pId')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
 
       <div class="col-md-4">
         <label for="pname" class="form-label">Product name:</label>
         <input type="text" class="form-control" id="pname" name="pname">
+        @error('pname')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
     </div>
 
@@ -35,11 +47,17 @@
       <div class="col-md-4">
         <label for="price" class="form-label">Price:</label>
         <input type="text" class="form-control" id="price" name="price">
+        @error('price')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
 
       <div class="col-md-4">
         <label for="quantity" class="form-label">Quantity:</label>
         <input type="text" class="form-control" id="quantity" name="quantity">
+        @error('quantity')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
       </div>
     </div>
 </div>
@@ -53,6 +71,9 @@
 
       <div class="image-upload-wrap">
         <input class="file-upload-input" type='file' id = "pic" name = "pic" onchange="readURL(this);" accept="image/*" />
+        @error('pic')
+                <span class="text-danger">{{$message}}</span>
+        @enderror
         <div class="drag-text">
           <h3>Drag and drop a file or select add Image</h3>
         </div>
@@ -62,6 +83,7 @@
         <div class="image-title-wrap">
           <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
         </div>
+        
       </div>
     </div>
 

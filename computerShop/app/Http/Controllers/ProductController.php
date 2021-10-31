@@ -14,7 +14,19 @@ class ProductController extends Controller
     }
 
     public function products(Request $req){
-
+        $this->validate(
+            $req,
+            
+            [
+                'category'=>'required',
+                'type'=>'required',
+                'pId'=>'required| regex:/^[a-zA-Z0-9_.-]*$/',
+                'pname'=>'required',
+                'price'=>'required|numeric|gt:0',
+                'quantity'=>'required|numeric|gt:0',
+                'pic' => 'required|image|mimes:jpg,png,jpeg'
+            ]
+        );
         
         if($req->hasFile('pic')){
             $pic = time().'_'.$req->file('pic')->getClientOriginalName();
