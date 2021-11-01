@@ -61,4 +61,6 @@ Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp
 
 
 //Orders
+Route::get('/order/Cart',[OrderController::class,'cart'])->name('order.cart');
 Route::get('/addtoCart/{id}',[OrderController::class,'addtoCart'])->name('addtocart');
+Route::get('/proRemove/{x}',[OrderController::class,'remove'])->name('remove.product');
