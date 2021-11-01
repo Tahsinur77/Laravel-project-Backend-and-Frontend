@@ -55,27 +55,6 @@ class EmployeeController extends Controller
     }
 
     public function editSubmit(Request $request){
-        $this->validate(
-            $request,
-            [
-                'eName'=>'required|min:3|regex:/^[a-zA-Z\s]*$/',
-                'empType'=>'required',
-                'pass'=>'required|min:4|same:confirmPass',
-                'confirmPass'=>'required|min:4',
-                'pNumber'=>'required|regex:/^[0-9]*$/|unique:customers',
-                'email'=>'required',
-                'eSalary'=>['required','regex:/^\d+(\.\d{1,2})?$/'],
-                'address'=>'required',
-                'dob'=>'required'
-                
-            ],
-            [
-                'eName.required'=>'Please put your name',
-                'eName.min'=>'Name must be greater than 2 charcters',
-                'pNumber.unique'=>'Phone number already used',
-                'eSalary.required'=>'Please enter salary',   
-            ]
-        );
         $var = Employee::where('id',$request->id)->first();
        // $var->id = $request->id;
         $var->eName= $request->eName;
