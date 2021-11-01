@@ -43,6 +43,8 @@ Route::get('/customer/list',[CustomerController::class,'customerList'])->name('c
 Route::get('/customer/edit/{id}/{cName}',[CustomerController::class,'edit'])->name('customer.edit');
 Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('customer.edit.submit');
 Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
+Route::get('/myorders',[CustomerController::class,'myOrders'])->name('myorders');
+Route::get('/ordetails',[CustomerController::class,'orderdetails'])->name('orderdetails');
 
 //Products
 Route::get('/addproducts',[ProductController::class,'addProducts'])->middleware('NavBarFindings')->name('addproducts');

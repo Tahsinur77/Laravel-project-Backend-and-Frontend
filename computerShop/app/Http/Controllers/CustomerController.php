@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\Order;
+use App\Models\OrderDetail;
 
 class CustomerController extends Controller
 {
@@ -69,6 +71,21 @@ class CustomerController extends Controller
         $id = $request->id;
         $customer = Customer::where('id',$id)->delete();
         return redirect()->route('customer.list');
+    }
+
+
+    public function myOrders(){
+        $customerId = session()->get('customerId');
+        $orders = Order::where('customerId',$customerId)->get();
+        return $orders;
+        return view('pages.customer.myorders')->with('orders',$orders);
+    }
+
+    public function orderdetails(Request $request){
+        $id = $request->id;
+        $order = Order::where('id',$id)->first();
+        return $order;
+        return view('pages.customer.orderdetails')->with('order',$order);
     }
 
     
