@@ -33,6 +33,14 @@ class userType
         if($request->session()->has('customerId')){
             $request->session()->forget('customerId');
         }
+
+        if($request->session()->has('employeeId')){
+            $request->session()->forget('employeeId');
+        }
+
+        if($request->session()->has('name')){
+            $request->session()->forget('name');
+        }
         
         $type ="";
 
@@ -40,9 +48,12 @@ class userType
             $type = "customer"; 
             $request->session()->put('customerName',$customer->cName);
             $request->session()->put('customerId',$customer->id);  
+            $request->session()->put('name',$customer->cName);
         }
         else if($employee != ""){
             $type = $employee->empType;
+            $request->session()->put('employeeId',$employee->id);  
+            $request->session()->put('name',$employee->eName);
         }
         $request->session()->put('type',$type);
         return $next($request);

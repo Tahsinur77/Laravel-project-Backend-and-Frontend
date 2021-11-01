@@ -13,35 +13,13 @@
   <link rel="stylesheet" href="{{asset('productDetails.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}"> 
   <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/pcBuilder.css')}}">
 
   <title>Document</title>
 </head>
 <body>
   @include('inc.header')
 
-  <div>
-     @yield('products')
-  </div>
-
-  <div>
-       @yield('addProducts')
-  </div>
-
-  <div>
-       @yield('productList')
-  </div>
-
-  <div>
-       @yield('about')
-  </div>
-
-  <div>
-     @yield('contact')
-  </div>
-
-  <div>
-     @yield('productDetails')
-  </div>
 
   <div>
      @yield('pcbuilder')

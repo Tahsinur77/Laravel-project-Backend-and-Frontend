@@ -38,10 +38,24 @@
                     </form>
 
                     <div>
-                        <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
-                        <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
-                        <a href="#" class="btn btn-outline-light">PC Builder </a>
-                        <a href="#" class="btn btn-outline-light">Cart</a>
+
+                        @if(Session::has('name'))
+                            @if(session('type') == "customer")
+                                <a style = "margin:10px" href="/customer/dash" class="btn btn-outline-light">Profile</a>
+                            @elseif(session('type') == "admin")
+                                <a style = "margin:10px" href="/admin/dash" class="btn btn-outline-light">Profile</a>
+                            @elseif(session('type') == "manager")
+                                <a style = "margin:10px" href="/admin/dash" class="btn btn-outline-light">Profile</a>
+                            @else
+                                <a style = "margin:10px" href="/employee/dash" class="btn btn-outline-light">Profile</a>
+                            @endif
+                        @else
+                            <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
+                            <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
+                        @endif
+
+                        <a href="{{route('pcBuilder')}}" class="btn btn-outline-light">PC Builder </a>
+                        <a href="{{route('order.cart')}}" class="btn btn-outline-light">Cart</a>
                         <a href="{{route('logout')}}" class="btn btn-outline-light">Logout</a>
                     </div>
                 </div>
