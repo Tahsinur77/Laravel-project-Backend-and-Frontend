@@ -8,6 +8,7 @@
             <th>Phone</th>
             <th>Email</th>
             <th>Address</th>
+            <th>Salary</th>
             <th>Date of birth</th>
             <th></th>
         </tr>
@@ -18,6 +19,7 @@
             <td>{{$employee->pNumber}}</td>
             <td>{{$employee->email}}</td>
             <td>{{$employee->address}}</td>
+            <td>{{$employee->eSalary}}</td>
             <td>{{$employee->dob}}</td>
             <td><a href="/employee/edit/{{$employee->id}}/{{$employee->eName}}">Edit</a></td>
             <td><a href="/employee/delete/{{$employee->id}}/{{$employee->eName}}">Delete</a></td>
