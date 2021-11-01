@@ -71,3 +71,7 @@ Route::get('/order/Cart',[OrderController::class,'cart'])->name('order.cart');
 Route::get('/addtoCart/{id}',[OrderController::class,'addtoCart'])->name('addtocart');
 Route::get('/proRemove/{x}',[OrderController::class,'remove'])->name('remove.product');
 Route::post('/placeOrder',[OrderController::class,'placeOrder'])->name('place.order');
+
+
+//pc builder
+Route::get('/pcBuilder', [welcomeController::class,'pcBuilder'])->name('pcBuilder');

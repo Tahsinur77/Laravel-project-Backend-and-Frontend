@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="coloumn">
-				<a href="" class="card card1">
+				<a href="{{route('home')}}" class="card card1">
 					<h2>Explore</h2>
 					
 				</a>

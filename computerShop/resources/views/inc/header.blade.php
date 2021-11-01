@@ -20,14 +20,14 @@
     <div class="m-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">Brand</a>
+                <a href="{{route('home')}}" class="navbar-brand"><h5>Trozan Horse</h5></a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse1">
                     <div class="navbar-nav">
-                        <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
+                        <a href="{{route('welcome')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{route('about')}}" class="nav-item nav-link active">About Us</a>
                         <a href="{{route('contact')}}" class="nav-item nav-link active">Contact Us</a>
                     </div>

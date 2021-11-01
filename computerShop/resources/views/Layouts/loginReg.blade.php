@@ -32,13 +32,13 @@
 </head>
 
 <body>
-    @include('inc.header')
+    
     
     <div>
         @yield('content')
     </div>
 
-    @include('inc.Footer')
+    
 
 </body>
 
