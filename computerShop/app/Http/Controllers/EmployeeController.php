@@ -9,6 +9,9 @@ class EmployeeController extends Controller
     public function registration(){
         return view('pages.employees.empReg');
     }
+    public function empDash(){
+        return view('pages.employees.empDash');
+    }
     public function registrationSubmit(Request $request){
         $this->validate(
             $request,
