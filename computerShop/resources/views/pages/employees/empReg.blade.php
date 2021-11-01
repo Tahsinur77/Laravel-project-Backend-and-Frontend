@@ -34,7 +34,7 @@
 
                 <div class="wrap-input100 validate-input">
                     <span class="label-input100">Password</span>
-                    <input class="input100" type="password" id="pass" name="pass" placeholder="Type your password">
+                    <input class="input100" type="password" id="pass" name="pass" placeholder="Type  password">
                     <span class="focus-input100"></span>
                     @error('pass')
                 		<span class="text-danger">{{$message}}</span>
@@ -43,7 +43,7 @@
 
                 <div class="wrap-input100 validate-input">
                     <span class="label-input100">Confirm Password</span>
-                    <input class="input100" type="password" id="confirmPass" name="confirmPass" placeholder="Retype your password">
+                    <input class="input100" type="password" id="confirmPass" name="confirmPass" placeholder="Retype  password">
                     <span class="focus-input100"></span>
                     @error('confirmPass')
                 		<span class="text-danger">{{$message}}</span>
@@ -53,7 +53,7 @@
                 <div class="wrap-input100 validate-input">
                     <span class="label-input100">Phone number</span>
                     <input class="input100" type="text" id="pNumber" name="pNumber" value="{{old('pNumber')}}"
-                        placeholder="Type your phone number">
+                        placeholder="Type phone number">
                     <span class="focus-input100"></span>
                     @error('pNumber')
                 		<span class="text-danger">{{$message}}</span>
@@ -62,7 +62,7 @@
                 <div class="wrap-input100 validate-input">
                     <span class="label-input100">Email</span>
                     <input class="input100" type="email" id="email" name="email" value="{{old('email')}}"
-                        placeholder="Type your email">
+                        placeholder="Type email">
                     <span class="focus-input100"></span>
                     @error('email')
                 		<span class="text-danger">{{$message}}</span>
@@ -71,16 +71,25 @@
                 <div class="wrap-input100 validate-input">
                     <span class="label-input100">Address</span>
                     <input class="input100" type="text" id="address" name="address" value="{{old('address')}}"
-                        placeholder="Type your Address">
+                        placeholder="Address">
                     <span class="focus-input100"></span>
                     @error('address')
+                		<span class="text-danger">{{$message}}</span>
+           		    @enderror
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Salary</span>
+                    <input class="input100" type="text" id="eSalary" name="eSalary" value="{{old('eSalary')}}"
+                        placeholder="Type salary">
+                    <span class="focus-input100"></span>
+                    @error('eSalary')
                 		<span class="text-danger">{{$message}}</span>
            		    @enderror
                 </div>
                 <div class="wrap-input100 validate-input" >
                     <span class="label-input100">Date of birth</span>
                     <input class="input100" type="date" id="dob"  name="dob" value="{{old('dob')}}"
-                        placeholder="Type your date of birth">
+                        placeholder="Type date of birth">
                     <span class="focus-input100"></span>
                     @error('dob')
                 		<span class="text-danger">{{$message}}</span>

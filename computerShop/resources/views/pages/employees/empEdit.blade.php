@@ -10,13 +10,13 @@
                     Update Empolyee
                 </span>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is required">
+                <div class="wrap-input100 validate-input m-b-23">
                     <span class="label-input100">Employee</span>
                     <input class="input100" type="text" name="eName" value="{{$employee->eName}}">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="Employee type is required">
+                <div class="wrap-input100 validate-input m-b-23">
                     <span class="label-input100">Choose employee type:</span>
                     <select id="empType" name="empType">
                         <option value="admin">Admin</option>
@@ -28,24 +28,30 @@
 
 
 
-                <div class="wrap-input100 validate-input" data-validate="Phone number is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Phone number</span>
                     <input class="input100" type="text" name="pNumber" value="{{$employee->pNumber}}">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Email is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Email</span>
                     <input class="input100" type="email" name="email" value="{{$employee->email}}">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Address is required">
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Address</span>
                     <input class="input100" type="text" name="address" value="{{$employee->address}}">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Date of birth is required">
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Salary</span>
+                    <input class="input100" type="text" name="eSalary" value="{{$employee->eSalary}}">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input">
                     <span class="label-input100">Date of birth</span>
                     <input class="input100" type="date" name="dob" value="{{$employee->dob}}">
                     <span class="focus-input100"></span>

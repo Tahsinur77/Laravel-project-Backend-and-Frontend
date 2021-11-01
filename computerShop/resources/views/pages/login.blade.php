@@ -32,7 +32,7 @@
 					</div>
 
 					<div class="txt1 text-center p-t-54 p-b-20">
-						<a href="/customer/registration" class="txt2">
+						<a href="{{route('customer.registration')}}" class="txt2">
 							Sign Up
 						</a>
 					</div>
