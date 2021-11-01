@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse1">
                     <div class="navbar-nav">
-                        <a href="{{route('welcome')}}" class="nav-item nav-link active">Home</a>
+                        <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{route('about')}}" class="nav-item nav-link active">About Us</a>
                         <a href="{{route('contact')}}" class="nav-item nav-link active">Contact Us</a>
                     </div>
@@ -38,9 +38,10 @@
                     </form>
 
                     <div>
-                        <a href="{{route('login')}}" class="btn btn-outline-light">Login</a>
+                        <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
                         <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
                         <a href="#" class="btn btn-outline-light">PC Builder </a>
+                        <a href="#" class="btn btn-outline-light">Cart</a>
                         <a href="{{route('logout')}}" class="btn btn-outline-light">Logout</a>
                     </div>
                 </div>

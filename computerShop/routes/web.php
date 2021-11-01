@@ -29,6 +29,7 @@ Route::get('/about', [welcomeController::class,'about'])->name('about');
 Route::get('/contact', [welcomeController::class,'contact'])->name('contact');
 Route::get('/logout', [welcomeController::class,'logout'])->name('logout');
 
+Route::get('/home', [welcomeController::class,'home'])->name('home');
 
 //Login
 Route::get('/login',[LoginController::class,'login'])->name('login');

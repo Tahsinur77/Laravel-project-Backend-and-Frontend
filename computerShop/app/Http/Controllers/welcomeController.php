@@ -10,6 +10,9 @@ class welcomeController extends Controller
     public function welcome(){
         return view('welcome');
     }
+    public function home(){
+        return view('pages.home');
+    }
     public function about(){
         $var = "Trojan Horse Tech & Engineering Ltd\n Trojan Horse Tech & Engineering Ltd is a Computer
         hardware, software & service supplier company. Having the aim to satisfy customers, providing
