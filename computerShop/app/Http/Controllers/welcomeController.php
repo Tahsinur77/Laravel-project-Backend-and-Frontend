@@ -33,4 +33,11 @@ class welcomeController extends Controller
         $var = array("Multiplan Branch", "Shop-xyz-xyz Level-05", "Multiplan Center", "New Elephant Road", "Dhaka");
         return view('pages.contact')->with('contact', $var);
     }
+
+
+    public function logout(Request $req){
+        $req->session()->flush();
+        return redirect()->route('welcome');
+    }
+
 }

@@ -27,11 +27,13 @@ use App\Http\Controllers\OrderController;
 Route::get('/',[welcomeController::class,'welcome'])->middleware('NavBarFindings')->name('welcome');
 Route::get('/about', [welcomeController::class,'about'])->name('about');
 Route::get('/contact', [welcomeController::class,'contact'])->name('contact');
+Route::get('/logout', [welcomeController::class,'logout'])->name('logout');
+
 Route::get('/home', [welcomeController::class,'home'])->name('home');
 
 //Login
 Route::get('/login',[LoginController::class,'login'])->name('login');
-Route::post('/login/submit',[LoginController::class,'loginSubmit'])->name('login.submit');
+Route::post('/login/submit',[LoginController::class,'loginSubmit'])->middleware('userType')->name('login.submit');
 
 
 
@@ -42,6 +44,8 @@ Route::get('/customer/list',[CustomerController::class,'customerList'])->name('c
 Route::get('/customer/edit/{id}/{cName}',[CustomerController::class,'edit'])->name('customer.edit');
 Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('customer.edit.submit');
 Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
+Route::get('/myorders',[CustomerController::class,'myOrders'])->name('myorders');
+Route::get('/ordetails',[CustomerController::class,'orderdetails'])->name('orderdetails');
 
 //Products
 Route::get('/addproducts',[ProductController::class,'addProducts'])->middleware('NavBarFindings')->name('addproducts');
@@ -64,3 +68,4 @@ Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp
 Route::get('/order/Cart',[OrderController::class,'cart'])->name('order.cart');
 Route::get('/addtoCart/{id}',[OrderController::class,'addtoCart'])->name('addtocart');
 Route::get('/proRemove/{x}',[OrderController::class,'remove'])->name('remove.product');
+Route::post('/placeOrder',[OrderController::class,'placeOrder'])->name('place.order');
