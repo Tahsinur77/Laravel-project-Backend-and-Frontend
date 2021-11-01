@@ -96,8 +96,8 @@
     <table class = "table table-bordered" id = "specification">
 
       <tr>
-        <th>Component</th>
-        <th>Model</th>
+        <th>Features</th>
+        <th>Details</th>
         <th>Button</th>
       </tr>
 

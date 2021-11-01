@@ -40,4 +40,9 @@ class welcomeController extends Controller
         return redirect()->route('welcome');
     }
 
+
+    public function pcBuilder(){
+        return view('pages.pcBuilder');
+    }
+
 }

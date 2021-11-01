@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Trebuchet MS", sans-serif;
+
+}
+
+.build-container
+{
+	width: 75%;
+	min-height: 80%;
+	float: center;
+	/* #margin: auto;
+	#padding-left: 50px;
+	#padding-right: 50px;
+	#border: 2px solid grey;
+	#margin: 10px; */
+	background-color: #dadada;
+	margin-right: 25px;
+	margin-left: 25px;
+
+	justify-content: center;
+}
+
+td .price
+{
+	width: 80px;
+	height: 10px;
+	padding: 5px;
+
+  
+  	background-color: red;
+}
+
+.cart
+{
+	margin: 80px auto;
+}
+
+table
+{
+	width: 100%;
+	/* #border-collapse: collapse; */
+}
+
+
+.product-info
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+th{
+	width: 100%;
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	/* #color: ; */
+	background: radial-gradient(#bbb9bd,#9a9aa2);
+	font-weight: normal;
+	
+}
+
+td{
+	padding: 25px;
+}
+
+.st-outline {
+    background: none;
+    color: #3749BB;
+}
+
+.btn {
+    
+    display: inline-block;
+    border: 2px solid #3749BB;
+    padding: 0 20px;
+    margin: 0;
+    height: 42px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3749BB;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    
+    transition: all 200ms linear;
+}
+
+.btn:hover{
+	background: #3749BB;
+	color: #fff;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*td a
+{
+	width: 90px;
+	height: 50px;
+	padding: 0 20px;
+	border: 2px solid #3749bb;
+	background-color: whitesmoke;
+	color: #3749bb;
+}*/
+
+
+td img
+{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.mark
+{
+	margin-left: 5px;
+    background: #666666;
+    color: #fff;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: normal;
+}

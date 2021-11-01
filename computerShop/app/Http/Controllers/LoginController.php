@@ -43,7 +43,7 @@ class LoginController extends Controller
             return redirect()->route('login');
         }
         else if($type == "customer"){
-            return redirect()->route('about');
+            return redirect()->route('home');
         }
         else{
             return $type;
