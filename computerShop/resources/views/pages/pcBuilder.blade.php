@@ -1,4 +1,4 @@
-@extends('Layouts.app')
+@extends('Layouts.pclay')
 @section('pcbuilder')
 	<h2 style="text-align: center; padding-top: 5%; color: #3749BB;">Welcome to PC Builder Section</h2>
       <div class="build-container cart">

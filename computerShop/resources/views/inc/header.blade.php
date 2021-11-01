@@ -38,10 +38,16 @@
                     </form>
 
                     <div>
+
+                        @if(Session::has('customerName'))
+                        <a style = "margin:10px" href="/customer/edit/{{session('customerId')}}/{{session('customerName')}}" class="btn btn-outline-light">Profile</a>
+                        @else
                         <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
                         <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
-                        <a href="#" class="btn btn-outline-light">PC Builder </a>
-                        <a href="#" class="btn btn-outline-light">Cart</a>
+                        @endif
+
+                        <a href="{{route('pcBuilder')}}" class="btn btn-outline-light">PC Builder </a>
+                        <a href="{{route('order.cart')}}" class="btn btn-outline-light">Cart</a>
                         <a href="{{route('logout')}}" class="btn btn-outline-light">Logout</a>
                     </div>
                 </div>
