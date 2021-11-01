@@ -41,7 +41,7 @@
                         <a href="{{route('login')}}" class="btn btn-outline-light">Login</a>
                         <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
                         <a href="#" class="btn btn-outline-light">PC Builder </a>
-                        <a href="#" class="btn btn-outline-light">Logout</a>
+                        <a href="{{route('logout')}}" class="btn btn-outline-light">Logout</a>
                     </div>
                 </div>
             </div>

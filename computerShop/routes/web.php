@@ -27,6 +27,7 @@ use App\Http\Controllers\OrderController;
 Route::get('/',[welcomeController::class,'welcome'])->middleware('NavBarFindings')->name('welcome');
 Route::get('/about', [welcomeController::class,'about'])->name('about');
 Route::get('/contact', [welcomeController::class,'contact'])->name('contact');
+Route::get('/logout', [welcomeController::class,'logout'])->name('logout');
 
 
 //Login
