@@ -12,6 +12,9 @@ class CustomerController extends Controller
     public function registration(){
         return view('pages.customers.reg');
     }
+    public function cusDash(){
+        return view('pages.customers.customerDash');
+    }
     public function registrationSubmit(Request $request){
      
         $this->validate(
