@@ -9,6 +9,18 @@ class OrderController extends Controller
 {
     //
 
+    public function cart(Request $req){
+        $lists = array();
+        if ($req->session()->has('lists')){
+            $productArr = json_decode($req->session()->get('lists'));
+            $lists = (array)$productArr;
+        }
+        
+        return view('pages.orders.addToCart')
+        ->with('cart',$lists)
+        ->with('x',0);
+    }
+
 
     public function addtoCart(Request $req){
         $id = $req->id;
@@ -43,9 +55,7 @@ class OrderController extends Controller
         session()->put('lists',json_encode($lists));
 
         //return "ok";
-        return view('pages.orders.addToCart')
-        ->with('cart',$lists)
-        ->with('x',0);
+        return redirect()->route('order.cart');
     }
 
 
@@ -63,9 +73,7 @@ class OrderController extends Controller
 
         session()->put('lists',json_encode($lists));
         
-        return view('pages.orders.addToCart')
-        ->with('cart',$lists)
-        ->with('x',0);
+        return redirect()->route('order.cart');
     }
 
 
