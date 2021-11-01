@@ -12,6 +12,9 @@ class EmployeeController extends Controller
     public function empDash(){
         return view('pages.employees.empDash');
     }
+    public function adminDash(){
+        return view('pages.employees.adminDash');
+    }
     public function registrationSubmit(Request $request){
         $this->validate(
             $request,
