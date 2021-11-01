@@ -46,7 +46,7 @@ Route::post('/customer/edit',[CustomerController::class,'editSubmit'])->name('cu
 Route::get('/customer/delete/{id}/{cName}',[CustomerController::class,'deleteCustomer']);
 Route::get('/myorders',[CustomerController::class,'myOrders'])->name('myorders');
 Route::get('/ordetails',[CustomerController::class,'orderdetails'])->name('orderdetails');
-Route::get('/customer/dash/',[CustomerController::class,'cusDash'])->name('cusDash');
+Route::get('/customer/dash',[CustomerController::class,'cusDash'])->name('cusDash');
 //Products
 Route::get('/addproducts',[ProductController::class,'addProducts'])->middleware('NavBarFindings')->name('addproducts');
 Route::post('/products/list',[ProductController::class,'products'])->name('products');
@@ -61,8 +61,8 @@ Route::get('/employee/list',[EmployeeController::class,'employeeList'])->name('e
 Route::get('/employee/edit/{id}/{eName}',[EmployeeController::class,'edit'])->name('employee.edit');
 Route::post('/employee/edit',[EmployeeController::class,'editSubmit'])->name('employee.edit.submit');
 Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp']);
-Route::get('/employee/dash/',[EmployeeController::class,'empDash'])->name('empDash');
-Route::get('/admin/dash/',[EmployeeController::class,'adminDash'])->name('adminDash');
+Route::get('/employee/dash',[EmployeeController::class,'empDash'])->name('empDash');
+Route::get('/admin/dash',[EmployeeController::class,'adminDash'])->name('adminDash');
 
 
 

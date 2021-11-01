@@ -39,11 +39,19 @@
 
                     <div>
 
-                        @if(Session::has('customerName'))
-                        <a style = "margin:10px" href="/customer/edit/{{session('customerId')}}/{{session('customerName')}}" class="btn btn-outline-light">Profile</a>
+                        @if(Session::has('name'))
+                            @if(session('type') == "customer")
+                                <a style = "margin:10px" href="/customer/dash" class="btn btn-outline-light">Profile</a>
+                            @elseif(session('type') == "admin")
+                                <a style = "margin:10px" href="/admin/dash" class="btn btn-outline-light">Profile</a>
+                            @elseif(session('type') == "manager")
+                                <a style = "margin:10px" href="/admin/dash" class="btn btn-outline-light">Profile</a>
+                            @else
+                                <a style = "margin:10px" href="/employee/dash" class="btn btn-outline-light">Profile</a>
+                            @endif
                         @else
-                        <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
-                        <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
+                            <a style = "margin:10px" href="{{route('login')}}" class="btn btn-outline-light">Login</a>
+                            <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
                         @endif
 
                         <a href="{{route('pcBuilder')}}" class="btn btn-outline-light">PC Builder </a>
