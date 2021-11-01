@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Navbar Color Schemes</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<style>
-    .navbar{
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar Color Schemes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    .navbar {
         margin-bottom: 1rem;
     }
-</style>
+    </style>
 </head>
+
 <body>
 
-<div class="m-4">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Brand</a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse1">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">About</a>
-                    <a href="#" class="nav-item nav-link">Products</a>
-                </div>
-                <form class="d-flex ms-auto">
-                    <input type="text" class="form-control me-sm-2" placeholder="Search">
-                    <button type="submit" class="btn btn-outline-light">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+    <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Brand</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse1">
+                    <div class="navbar-nav">
+                        <a href="{{route('welcome')}}" class="nav-item nav-link active">Home</a>
+                        <a href="{{route('about')}}" class="nav-item nav-link active">About Us</a>
+                        <a href="{{route('contact')}}" class="nav-item nav-link active">Contact Us</a>
+                    </div>
 
-    @include('inc.topnav')
-</div>
+                    <form class="d-flex ms-auto">
+                        <input type="text" class="form-control me-sm-2" placeholder="Search">
+                        <button type="submit" class="btn btn-outline-light">Search</button>
+                    </form>
+
+                    <div>
+                        <a href="{{route('login')}}" class="btn btn-outline-light">Login</a>
+                        <a href="{{route('customer.registration')}}" class="btn btn-outline-light">Registration</a>
+                        <a href="#" class="btn btn-outline-light">PC Builder </a>
+                        <a href="#" class="btn btn-outline-light">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        @include('inc.topnav')
+    </div>
 
 
 
 </body>
+
 </html>

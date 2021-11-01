@@ -81,7 +81,7 @@
 					</div>
 
 					<div class="txt1 text-center p-t-54 p-b-20">
-						<a href="#" class="txt2">
+						<a href="{{route('login')}}" class="txt2">
 							<b>Sign in<b>
 						</a>
 						
