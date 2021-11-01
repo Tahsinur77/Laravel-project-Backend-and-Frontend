@@ -41,7 +41,7 @@ class CustomerController extends Controller
         $var->address = $request->address;
         $var->dob = $request->dob;
         $var->save();
-        return "ok";     
+        return redirect()->route('login');     
     }
     public function customerList(){
         

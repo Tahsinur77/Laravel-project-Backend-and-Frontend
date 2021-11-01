@@ -24,15 +24,32 @@ class LoginController extends Controller
                 'pass.required'=>'Please put your password',
             ]
         );
-        $customer = Customer::where('pNumber',$request->pNumber)->first();
-        $employee = Employee::where('pNumber',$request->pNumber)->first();
-        if($customer!=""){
-            $type = "customer";
+        // $customer = Customer::where('pNumber',$request->pNumber)->first();
+        // $employee = Employee::where('pNumber',$request->pNumber)->first();
+        // if($customer!=""){
+        //     $type = "customer";
+        // }
+        // else{
+        //     $type = $employee->empType;
+        // }
+
+        // $request->session()->put('phone',$request->pNumber);
+
+        if($request->session()->has('type')){
+            $type = $request->session()->get('type');
+        }
+        
+        if($type == ""){
+            return redirect()->route('login');
+        }
+        else if($type == "customer"){
+            return redirect()->route('about');
         }
         else{
-            $type = $employee->empType;
+            return $type;
         }
-        return $type;
+
+        
     }
     
 }
