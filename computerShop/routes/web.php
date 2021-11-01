@@ -61,6 +61,8 @@ Route::get('/employee/list',[EmployeeController::class,'employeeList'])->name('e
 Route::get('/employee/edit/{id}/{eName}',[EmployeeController::class,'edit'])->name('employee.edit');
 Route::post('/employee/edit',[EmployeeController::class,'editSubmit'])->name('employee.edit.submit');
 Route::get('/employee/delete/{id}/{eName}',[EmployeeController::class,'deleteEmp']);
+Route::get('/employee/dash/',[EmployeeController::class,'empDash'])->name('empDash');
+Route::get('/admin/dash/',[EmployeeController::class,'adminDash'])->name('adminDash');
 
 
 
