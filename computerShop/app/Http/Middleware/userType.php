@@ -25,11 +25,21 @@ class userType
         if($request->session()->has('type')){
             $request->session()->forget('type');
         }
+
+        if($request->session()->has('customerName')){
+            $request->session()->forget('customerName');
+        }
+
+        if($request->session()->has('customerId')){
+            $request->session()->forget('customerId');
+        }
         
         $type ="";
 
         if($customer!=""){
-            $type = "customer";  
+            $type = "customer"; 
+            $request->session()->put('customerName',$customer->cName);
+            $request->session()->put('customerId',$customer->id);  
         }
         else if($employee != ""){
             $type = $employee->empType;

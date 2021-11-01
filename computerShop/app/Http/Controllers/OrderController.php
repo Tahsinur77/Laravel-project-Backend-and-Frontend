@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderDetail;
 
 class OrderController extends Controller
 {
@@ -74,6 +76,40 @@ class OrderController extends Controller
         session()->put('lists',json_encode($lists));
         
         return redirect()->route('order.cart');
+    }
+
+    public function placeOrder(Request $req){
+        if($req->session()->has('customerId')){
+            $num = $req->quantity;
+            $customerId = $req->session()->get('customerId');
+            $Orderproducts = json_decode($req->session()->get('lists'));
+            $status = "processing";
+
+            $order = new Order();
+            $order->customerId = $customerId;
+            $order->status = $status;
+            $order->save();
+
+
+            $x = 0;
+
+            foreach($Orderproducts as $orderproduct){
+                $orderDetail = new orderDetail();
+                $orderDetail->orderId = $order->id;
+                $orderDetail->productId = $orderproduct->id;
+                $orderDetail->orderQuantity = $num[$x];
+                $orderDetail->totalPrice = $num[$x]*$orderproduct->pPrice;
+                $orderDetail->save();
+
+            }
+
+
+            $req->session()->forget('lists');
+            return "Order Complete";
+        }
+        else{
+            return redirect()->route('login');
+        }
     }
 
 
