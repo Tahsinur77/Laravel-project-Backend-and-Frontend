@@ -8,6 +8,8 @@ use App\Models\Product;
 class OrderController extends Controller
 {
     //
+
+
     public function addtoCart(Request $req){
         $id = $req->id;
         $product = Product::where('id',$id)->first();
@@ -22,21 +24,49 @@ class OrderController extends Controller
         $var->pQuantity = $product->pQuantity;
         $var->pPicture = 'storage/uploads/'.$product->pPicture;
         $var->pSpecification = json_decode($product->pSpecification);
+        
 
         $lists = array();
 
         if ($req->session()->has('lists')){
             $productArr = json_decode($req->session()->get('lists'));
-            $lists = $productArr;
+            $lists = (array)$productArr;
 
         }
 
         array_push($lists,$var);
 
+        //return $lists;
+
+        //$lists = $lists->distinct();
+
         session()->put('lists',json_encode($lists));
 
         //return "ok";
         return view('pages.orders.addToCart')
-        ->with('cart',$lists);
+        ->with('cart',$lists)
+        ->with('x',0);
     }
+
+
+    public function remove(Request $req){
+
+        $index = $req->x;
+
+        $lists = array();
+        if ($req->session()->has('lists')){
+            $productArr = (array) json_decode($req->session()->get('lists'));
+            unset($productArr[$index]);
+            $lists = array_values($productArr);
+
+        }
+
+        session()->put('lists',json_encode($lists));
+        
+        return view('pages.orders.addToCart')
+        ->with('cart',$lists)
+        ->with('x',0);
+    }
+
+
 }
