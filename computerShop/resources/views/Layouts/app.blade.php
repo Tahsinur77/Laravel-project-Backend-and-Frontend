@@ -43,8 +43,10 @@
      @yield('productDetails')
   </div>
 
+ 
+
   <div>
-     @yield('pcbuilder')
+     @yield('orderDetails')
   </div>
 
   <br><br><br><br>

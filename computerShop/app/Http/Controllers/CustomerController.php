@@ -80,16 +80,18 @@ class CustomerController extends Controller
     public function myOrders(){
         $customerId = session()->get('customerId');
         $orders = Order::where('customerId',$customerId)->get();
-        return $orders;
-        return view('pages.customer.myorders')->with('orders',$orders);
+
+      
+        return view('pages.customers.orderHistory')
+        ->with('orders',$orders);
     }
 
-    public function orderdetails(Request $request){
-        $id = $request->id;
-        $order = Order::where('id',$id)->first();
-        return $order;
-        return view('pages.customer.orderdetails')->with('order',$order);
-    }
+    // public function orderdetails(Request $request){
+    //     $id = $request->id;
+    //     $order = Order::where('id',$id)->first();
+    //     return $order;
+    //     return view('pages.customer.orderdetails')->with('order',$order);
+    // }
 
     
 }
