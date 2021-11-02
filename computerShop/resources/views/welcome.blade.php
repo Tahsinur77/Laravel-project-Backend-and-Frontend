@@ -33,7 +33,7 @@
 					
 				</a>
 
-				<a href="" class="card card2">
+				<a href="{{route('pcBuilder')}}" class="card card2">
 					<h2>Build PC</h2>
 					
 				</a>

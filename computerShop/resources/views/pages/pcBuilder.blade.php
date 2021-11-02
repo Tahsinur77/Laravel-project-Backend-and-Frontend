@@ -17,7 +17,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/cpu.svg">
+                  			<img src="storage/uploads/Icons/cpu.svg">
                   			<div>
                   				<span>CPU</span>
                   				<span class="mark">Required</span>
@@ -41,7 +41,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/cooler.svg">
+                  			<img src="storage/uploads/Icons/cooler.svg">
                   			<div>
                   				<span>CPU Cooler</span>
                   				<br>
@@ -62,7 +62,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="../Pictures/Icons/cpu.svg">
+                  			<img src="storage/uploads/Icons/cpu.svg">
                   			<div>
                   				<span>Mother Board</span>
                   				<span class="mark">Required</span>
@@ -84,7 +84,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/ram.svg">
+                  			<img src="storage/uploads/Icons/ram.svg">
                   			<div>
                   				<span>Ram - 1</span>
                   				<span class="mark">Required</span>
@@ -105,7 +105,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/ram.svg">
+                  			<img src="storage/uploads/Icons/ram.svg">
                   			<div>
                   				<span>Ram - 2</span>
 
@@ -126,7 +126,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/hdd.svg">
+                  			<img src="storage/uploads/Icons/hdd.svg">
                   			<div>
                   				<span>Storage - 1</span>
                   				<span class="mark">Required</span>
@@ -147,7 +147,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/hdd.svg">
+                  			<img src="storage/uploads/Icons/hdd.svg">
                   			<div>
                   				<span>Storage - 2</span>
 
@@ -168,7 +168,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/gcard.svg">
+                  			<img src="storage/uploads/Icons/gcard.svg">
                   			<div>
                   				<span>Graphics Card</span>
 
@@ -189,7 +189,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/psupply.svg">
+                  			<img src="storage/uploads/Icons/psupply.svg">
                   			<div>
                   				<span>Power Supply</span>
                   				<span class="mark">Required</span>
@@ -210,7 +210,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/casing.svg">
+                  			<img src="storage/uploads/Icons/casing.svg">
                   			<div>
                   				<span>Casing</span>
 
@@ -237,7 +237,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/cpu.svg">
+                  			<img src="storage/uploads/Icons/cpu.svg">
                   			<div>
                   				<span>Casing Cooler</span>
 
@@ -258,7 +258,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/monitor.svg">
+                  			<img src="storage/uploads/Icons/monitor.svg">
                   			<div>
                   				<span>Monitor</span>
 
@@ -279,7 +279,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/keyboard.svg">
+                  			<img src="storage/uploads/Icons/keyboard.svg">
                   			<div>
                   				<span>Keyboard</span>
 
@@ -300,7 +300,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/mouse.svg">
+                  			<img src="storage/uploads/Icons/mouse.svg">
                   			<div>
                   				<span>Mouse</span>
 
@@ -321,7 +321,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/cpu.svg">
+                  			<img src="storage/uploads/Icons/cpu.svg">
                   			<div>
                   				<span>Headphone</span>
 
@@ -344,7 +344,7 @@
                   <tr style="background-color: whitesmoke;">
                   	<td>
                   		<div class="product-info">
-                  			<img src="/Pictures/Icons/ups.svg">
+                  			<img src="storage/uploads/Icons/ups.svg">
                   			<div>
                   				<span>UPS</span>
 
