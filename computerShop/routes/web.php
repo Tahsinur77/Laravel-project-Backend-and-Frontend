@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\welcomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\sellController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,3 +76,9 @@ Route::post('/placeOrder',[OrderController::class,'placeOrder'])->name('place.or
 
 //pc builder
 Route::get('/pcBuilder', [welcomeController::class,'pcBuilder'])->name('pcBuilder');
+
+
+//sell
+Route::get('/unsold', [sellController::class,'unsold'])->name('unsold');
+Route::get('/unsold/orderDetails/{orderId}', [sellController::class,'unsoldOrderDetails'])->name('unsoldOrderDetails');
+Route::get('/sell/{orderId}', [sellController::class,'sellOrder'])->name('sellOrder');

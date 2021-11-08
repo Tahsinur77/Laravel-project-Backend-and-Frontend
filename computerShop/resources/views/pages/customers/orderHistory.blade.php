@@ -20,6 +20,7 @@
         @foreach($order->orderDetail as $od)
             <tr>
                 <td>{{$od->product->pName}}</td>
+                <!-- <td>{{$od->product->pPicture}}</td> -->
                 <td><img width="100px" height="100px" src="storage/uploads/{{$od->product->pPicture}}"></td>
                 <td>{{$od->product->pPrice}}</td>
                 <td>{{$od->orderQuantity}}</td>

@@ -49,6 +49,14 @@
      @yield('orderDetails')
   </div>
 
+  <div>
+     @yield('unsold')
+  </div>
+
+  <div>
+     @yield('unsoldOrderDetails')
+  </div>
+
   <br><br><br><br>
   @include('inc.Footer')
   
