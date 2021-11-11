@@ -39,8 +39,12 @@ class sellController extends Controller
             $var->total = $od->product->pPrice * $od->orderQuantity;
             $var->save();
         }
+
+        $order = Order::where('id',$orderId)->first();
+        $order->status = 'Approve';
+        $order->save(); 
             
-    return "sold";
+    return redirect()->route('unsold');
 
     }
 }

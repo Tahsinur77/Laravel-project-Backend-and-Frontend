@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('unsold')}}">Come For Sell</a>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('unsold')}}">Order For Sell</a>
                         </div>
                     </div>
                 </div>
