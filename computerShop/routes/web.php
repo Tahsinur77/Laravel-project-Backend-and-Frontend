@@ -37,7 +37,6 @@ Route::get('/login',[LoginController::class,'login'])->name('login');
 Route::post('/login/submit',[LoginController::class,'loginSubmit'])->middleware('userType')->name('login.submit');
 
 
-
 //Customers
 Route::get('/customer/registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('customer/registration/submit',[CustomerController::class,'registrationSubmit'])->name('customer.registration.submit');
